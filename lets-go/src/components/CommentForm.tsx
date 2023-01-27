@@ -15,13 +15,13 @@ const CommentForm = () => {
           alert(JSON.stringify(values, null, 2));
         }}
       >
-        <form>
+        <Form>
           <label htmlFor="name">Name:</label>
           <Field id="name" name="name" placeholder="name here" />
 
           <label htmlFor="comment">Comment:</label>
           <Field id="comment" name="comment" placeholder="comment here" />
-        </form>
+        </Form>
       </Formik>
     </div>
   );
