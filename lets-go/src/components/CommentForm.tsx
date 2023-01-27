@@ -21,6 +21,7 @@ const CommentForm = () => {
 
           <label htmlFor="comment">Comment:</label>
           <Field id="comment" name="comment" placeholder="comment here" />
+          <button type="submit">submit</button>
         </Form>
       </Formik>
     </div>
