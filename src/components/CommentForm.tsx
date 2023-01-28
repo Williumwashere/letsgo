@@ -2,6 +2,7 @@ import React from "react";
 import { Formik, Field, Form } from "formik";
 
 const CommentForm = () => {
+  console.log("happening!");
   return (
     <div>
       <h1>Test Form</h1>
@@ -10,10 +11,7 @@ const CommentForm = () => {
           name: "",
           comment: "",
         }}
-        onSubmit={async (values) => {
-          await new Promise((r) => setTimeout(r, 500));
-          alert(JSON.stringify(values, null, 2));
-        }}
+        onSubmit={() => console.log("hello there")}
       >
         <Form>
           <label htmlFor="name">Name:</label>
@@ -21,11 +19,12 @@ const CommentForm = () => {
 
           <label htmlFor="comment">Comment:</label>
           <Field id="comment" name="comment" placeholder="comment here" />
+
           <button type="submit">submit</button>
         </Form>
       </Formik>
     </div>
   );
-}
+};
 
 export default CommentForm;
